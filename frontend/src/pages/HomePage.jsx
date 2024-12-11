@@ -1,7 +1,21 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
-
+import axios from 'axios';
+import { useEffect } from 'react';
 const HomePage = () => {
+  const url = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000/";
+  const userinfo = async () => {
+    try {
+      const response = await axios.get(`${url}api/v1/user/me`);
+      console.log("Response from backend:", response.data);
+    } catch (error) {
+      console.error("Error fetching user info:", error.message);
+    }
+  };
+  useEffect(() => {
+    userinfo();
+  }, []);
+
   return (
     <div>
       {/* Header Section */}
@@ -92,9 +106,9 @@ const HomePage = () => {
       <section id="cta" className="py-10 bg-blue-700 text-white text-center">
         <h3 className="text-xl font-bold">Ready to Stay Safe?</h3>
         <Link to="/signup">
-        <button className="mt-4 bg-white text-blue-700 px-6 py-2 rounded-lg hover:bg-gray-100">
-          Get Started for Free
-        </button>
+          <button className="mt-4 bg-white text-blue-700 px-6 py-2 rounded-lg hover:bg-gray-100">
+            Get Started for Free
+          </button>
         </Link>
       </section>
 
