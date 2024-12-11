@@ -1,4 +1,3 @@
-import React from 'react';
 
 const LoginForm = () => {
   return (
@@ -67,30 +66,30 @@ const LoginForm = () => {
           </form>
 
           <div className="mt-6 flex flex-col space-y-4 items-center">
-  {/* Continue with Google Button */}
-  <button
-    className="flex items-center justify-center w-full sm:w-72 rounded-lg bg-white border border-gray-300 px-4 py-3 text-lg font-medium text-gray-700 shadow-lg hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-offset-2"
-  >
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-      alt="Google Icon"
-      className="w-6 h-6 mr-3"
-    />
-    Google
-  </button>
+            {/* Continue with Google Button */}
+            <button
+              className="flex items-center justify-center w-full sm:w-72 rounded-lg bg-white border border-gray-300 px-4 py-3 text-lg font-medium text-gray-700 shadow-lg hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-offset-2"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                alt="Google Icon"
+                className="w-6 h-6 mr-3"
+              />
+              Google
+            </button>
 
-  {/* Continue with App Store Button */}
-  <button
-    className="flex items-center justify-center w-full sm:w-72 rounded-lg bg-white border border-gray-300 px-4 py-3 text-lg font-medium text-gray-700 shadow-lg hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-offset-2"
-  >
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/4/46/Apple_Store_logo.svg"
-      alt="App Store Icon"
-      className="w-6 h-6 mr-3"
-    />
-    App Store
-  </button>
-</div>
+            {/* Continue with App Store Button */}
+            <button
+              className="flex items-center justify-center w-full sm:w-72 rounded-lg bg-white border border-gray-300 px-4 py-3 text-lg font-medium text-gray-700 shadow-lg hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-offset-2"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/4/46/Apple_Store_logo.svg"
+                alt="App Store Icon"
+                className="w-6 h-6 mr-3"
+              />
+              App Store
+            </button>
+          </div>
 
 
           <p className="mt-10 text-center text-sm text-gray-500">
