@@ -6,6 +6,8 @@ const LoginForm = () => {
 
   const navigate = useNavigate();
   const url = import.meta.env.VITE_BACKEND_URL || "https://naturaldisasterforcastingbackend.onrender.com/";
+  console.log(url);
+  
   
   const [formData, setFormData] = useState({
     email: "",

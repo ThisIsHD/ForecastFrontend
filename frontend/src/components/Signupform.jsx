@@ -15,6 +15,8 @@ function SignUp() {
   const [success, setSuccess] = useState(false);
 
   const url = import.meta.env.VITE_BACKEND_URL || "https://naturaldisasterforcastingbackend.onrender.com/";
+  console.log(url);
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
