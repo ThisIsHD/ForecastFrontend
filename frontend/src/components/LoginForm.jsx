@@ -5,7 +5,7 @@ import axios from "axios";
 const LoginForm = () => {
 
   const navigate = useNavigate();
-  const url = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000/";
+  const url = import.meta.env.VITE_BACKEND_URL || "https://naturaldisasterforcastingbackend.onrender.com/";
   
   const [formData, setFormData] = useState({
     email: "",
