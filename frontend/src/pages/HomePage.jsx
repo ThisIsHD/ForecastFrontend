@@ -1,9 +1,17 @@
 // import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import "ol/ol.css"; // Import OpenLayers styles
+import { Map, View } from "ol";
+import TileLayer from "ol/layer/Tile";
+import OSM from "ol/source/OSM";
+
 const HomePage = () => {
   const url = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000/";
+  const mapRef = useRef(null); // Reference for the map container
+
+  // Fetch user info from the backend
   const userinfo = async () => {
     try {
       const response = await axios.get(`${url}api/v1/user/me`);
@@ -12,8 +20,25 @@ const HomePage = () => {
       console.error("Error fetching user info:", error.message);
     }
   };
+
   useEffect(() => {
     userinfo();
+
+    // Initialize the OpenLayers map
+    const map = new Map({
+      target: mapRef.current, // Target the div with mapRef
+      layers: [
+        new TileLayer({
+          source: new OSM(), // Use OpenStreetMap as the base layer
+        }),
+      ],
+      view: new View({
+        center: [0, 0], // Initial center coordinates in EPSG:3857 (projection)
+        zoom: 2, // Initial zoom level
+      }),
+    });
+
+    return () => map.setTarget(null); // Cleanup map on component unmount
   }, []);
 
   return (
@@ -83,10 +108,11 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-gray-800">Live Disaster Map</h3>
           <div className="mt-6">
-            <div className="h-96 bg-gray-200 shadow-lg rounded-lg">
-              {/* Replace with actual map integration */}
-              <p className="text-gray-500 pt-40">Interactive map coming soon</p>
-            </div>
+            {/* OpenLayers Map Container */}
+            <div
+              ref={mapRef} // Reference to render the OpenLayers map
+              className="h-96 bg-gray-200 shadow-lg rounded-lg"
+            ></div>
           </div>
         </div>
       </section>
@@ -134,3 +160,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
