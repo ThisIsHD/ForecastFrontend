@@ -25,7 +25,11 @@ const HomePage = () => {
 
   const userinfo = async () => {
     try {
-      const response = await axios.get(`${url}api/v1/user/me`);
+      console.log("Fetching user info...", url);
+      
+      const response = await axios.get(`${url}api/v1/user/me`,{
+        withCredentials: true
+      });
       console.log("Response from backend:", response.data);
     } catch (error) {
       console.error("Error fetching user info:", error.message);
