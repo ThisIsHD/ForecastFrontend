@@ -1,0 +1,149 @@
+[33mcommit 0ae74e3c49c0abad57a377a7c8938591ac31439a[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Sebanti2003 <dasguptasebanti2003@gmail.com>
+Date:   Mon Jan 27 00:46:17 2025 +0530
+
+    done
+
+[33mcommit ebb296998205cb907dcac271fc5435a1a641bc2e[m
+Author: ThisIsHD <himadridey165@gmail.com>
+Date:   Sat Dec 21 19:53:14 2024 +0530
+
+    added markers to the data
+
+[33mcommit 4c2e3b7a5c9da1e61320e05039a092f81ea39ea1[m
+Author: ThisIsHD <himadridey165@gmail.com>
+Date:   Tue Dec 17 01:06:11 2024 +0530
+
+    updated the HomePage.jsx file by integrating the map using OpenLayer
+
+[33mcommit bd9a02c17069f330572f2c4542861afe4ab4f7c4[m
+Merge: f7394fb 562482d
+Author: Sebanti2003 <130296977+Sebanti2003@users.noreply.github.com>
+Date:   Thu Dec 12 22:49:39 2024 +0530
+
+    Merge pull request #6 from ThisIsHD/sebanti
+    
+    done
+
+[33mcommit 562482df788f2c8a645a3bd152dca57960466f81[m[33m ([m[1;31morigin/sebanti[m[33m, [m[1;32msebanti[m[33m)[m
+Author: Sebanti2003 <dasguptasebanti2003@gmail.com>
+Date:   Thu Dec 12 22:48:47 2024 +0530
+
+    done
+
+[33mcommit f7394fbfdd4deb18d214cba275a8fee68eccf683[m
+Merge: 8cdbfdb 9385fe4
+Author: Sebanti2003 <130296977+Sebanti2003@users.noreply.github.com>
+Date:   Thu Dec 12 22:44:25 2024 +0530
+
+    Merge pull request #5 from ThisIsHD/sebanti
+    
+    done
+
+[33mcommit 9385fe4347abcde7b6f719896f8efe521276a3fa[m
+Author: Sebanti2003 <dasguptasebanti2003@gmail.com>
+Date:   Thu Dec 12 22:42:39 2024 +0530
+
+    done
+
+[33mcommit 8cdbfdbc680b87ffc4739c48b2b3c54b015731e6[m
+Author: ThisIsHD <himadridey165@gmail.com>
+Date:   Thu Dec 12 21:50:30 2024 +0530
+
+    vercel.json file added
+
+[33mcommit 2f707c122098b6353c711a9b2a269672b7137c68[m
+Merge: 2cfc0bd 6475fbd
+Author: Sebanti2003 <130296977+Sebanti2003@users.noreply.github.com>
+Date:   Thu Dec 12 02:33:10 2024 +0530
+
+    Merge pull request #4 from ThisIsHD/sebanti
+    
+    env
+
+[33mcommit 6475fbdf22d99478ca65ac4791c3eb85a8baec3d[m
+Author: Sebanti2003 <dasguptasebanti2003@gmail.com>
+Date:   Thu Dec 12 02:32:36 2024 +0530
+
+    env
+
+[33mcommit 2cfc0bdd55ddfe31930cdec5779facbf902f50c4[m
+Merge: 844d5be a3b97c4
+Author: Sebanti2003 <130296977+Sebanti2003@users.noreply.github.com>
+Date:   Thu Dec 12 02:31:13 2024 +0530
+
+    Merge pull request #3 from ThisIsHD/sebanti
+    
+    env
+
+[33mcommit a3b97c4f1198517af6b2c7276be047671acdc628[m
+Author: Sebanti2003 <dasguptasebanti2003@gmail.com>
+Date:   Thu Dec 12 02:30:16 2024 +0530
+
+    env
+
+[33mcommit 844d5bee9e50ff1974d426ed3ce15a87baf618ac[m
+Merge: 402fb56 19f9fd7
+Author: Sebanti2003 <130296977+Sebanti2003@users.noreply.github.com>
+Date:   Thu Dec 12 02:27:45 2024 +0530
+
+    Merge pull request #2 from ThisIsHD/sebanti
+    
+    Sebanti
+
+[33mcommit 19f9fd7b644b8a7df1fffcca2f12eaada28fa02e[m
+Author: Sebanti2003 <dasguptasebanti2003@gmail.com>
+Date:   Thu Dec 12 02:26:29 2024 +0530
+
+    done
+
+[33mcommit 692769f854621ee0d812f5566526572ac24ba7a2[m
+Author: Sebanti2003 <dasguptasebanti2003@gmail.com>
+Date:   Wed Dec 11 22:27:32 2024 +0530
+
+    done
+
+[33mcommit 402fb56fe043e3508310011c5ee6e783f132f77d[m
+Author: ThisIsHD <himadridey165@gmail.com>
+Date:   Wed Dec 11 21:49:22 2024 +0530
+
+    updated components folder, pages folder, created new routes
+
+[33mcommit 0f84980c9abce7bcc71154c407fe767cf9f38d42[m
+Author: Sebanti2003 <dasguptasebanti2003@gmail.com>
+Date:   Mon Dec 2 20:53:23 2024 +0530
+
+    added the libraries in navbar ::problem 1
+
+[33mcommit db2b8541219d18f86ed68877807a075ac8455c35[m
+Merge: 2f9850f ad99be7
+Author: Himadri Dey <130204168+ThisIsHD@users.noreply.github.com>
+Date:   Mon Dec 2 20:40:47 2024 +0530
+
+    Merge pull request #1 from ThisIsHD/Himadri
+    
+    created the login and signup forms added in the component
+
+[33mcommit ad99be7099fa893b478df2e5923190aaa5c1afff[m
+Author: ThisIsHD <himadridey165@gmail.com>
+Date:   Mon Dec 2 20:39:28 2024 +0530
+
+    created the login and signup forms added in the component
+
+[33mcommit 2f9850f03826c5bff357aee5a253cc3af015ceb8[m
+Author: Sebanti2003 <dasguptasebanti2003@gmail.com>
+Date:   Fri Nov 29 23:55:07 2024 +0530
+
+    tailwind configuration
+
+[33mcommit 350c7462ba9d4a210d6357356ea2ab1750bdd016[m
+Author: ThisIsHD <himadridey165@gmail.com>
+Date:   Fri Nov 29 23:38:48 2024 +0530
+
+    created the frontend folder
+
+[33mcommit c2328196db13c9d62e1dcf20e43d14457cdefd8c[m
+Author: Himadri Dey <130204168+ThisIsHD@users.noreply.github.com>
+Date:   Fri Nov 29 23:31:54 2024 +0530
+
+    Initial commit
