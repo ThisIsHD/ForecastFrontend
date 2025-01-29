@@ -12,6 +12,7 @@ import Feature from "ol/Feature";
 import Point from "ol/geom/Point";
 import { fromLonLat } from "ol/proj";
 import { Style, Icon } from "ol/style";
+import Navbar from '../components/Navbar';
 
 const HomePage = () => {
   const url = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000/";
@@ -80,6 +81,7 @@ const HomePage = () => {
 
   return (
     <div>
+      <Navbar/>
       {/* Header Section */}
       <header className="bg-blue-700 text-white px-6 py-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">

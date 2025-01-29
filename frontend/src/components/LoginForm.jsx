@@ -37,6 +37,7 @@ const LoginForm = () => {
       });
       console.log("Login successful", response.data);
       navigate("/");
+      window.refresh();
     } catch (error) {
       setError(error?.response?.data?.message || "Login failed, please try again.");
     } finally {
