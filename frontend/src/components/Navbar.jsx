@@ -25,7 +25,6 @@ function Navbar() {
       });
       setUser(null);
       window.location.href = "/";
-      window.refresh();
     } catch (error) {
       console.log(error)
 
@@ -47,7 +46,7 @@ function Navbar() {
   };
   useEffect(() => {
     userinfo();
-  },[user,setUser]);
+  },[]);
   return (
     <Disclosure as="nav" className="bg-gray-800">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">

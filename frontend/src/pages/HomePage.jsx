@@ -39,8 +39,6 @@ const HomePage = () => {
 
   useEffect(() => {
     userinfo();
-
-    // Disaster Features
     const disasterFeatures = disasterData.map((disaster) => {
       const feature = new Feature({
         geometry: new Point(fromLonLat(disaster.coordinates)), // Convert to OpenLayers projection
