@@ -1,6 +1,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
   { name: 'Team', href: '#', current: false },
@@ -11,8 +12,41 @@ const navigation = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
+const url = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000/";
+
+
 
 function Navbar() {
+  const [user, setUser] = useState(null);
+  const logout = async () => {
+    try {
+      await axios.get(`${url}api/v1/user/auth/logout`, {
+        withCredentials: true
+      });
+      setUser(null);
+      window.location.href = "/";
+    } catch (error) {
+      console.log(error)
+
+    }
+  }
+  const userinfo = async () => {
+    try {
+      console.log("Fetching user info...", url);
+
+      const response = await axios.get(`${url}api/v1/user/me`, {
+        withCredentials: true
+      });
+      console.log("Response from backend:", response.data);
+      setUser(response.data);
+
+    } catch (error) {
+      console.error("Error fetching user info:", error.message);
+    }
+  };
+  useEffect(() => {
+    userinfo();
+  },[]);
   return (
     <Disclosure as="nav" className="bg-gray-800">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -96,15 +130,16 @@ function Navbar() {
                   </a>
                 </MenuItem>
                 <MenuItem>
-                  <a
-                    href="#"
+                  <div
+                    onClick={logout}
                     className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:outline-none"
                   >
                     Sign out
-                  </a>
+                  </div>
                 </MenuItem>
               </MenuItems>
             </Menu>
+            <div className='font-bold text-white mx-3 text-xs'>{user?.userinfo?.username || ""}</div>
           </div>
         </div>
       </div>
