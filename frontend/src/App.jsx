@@ -6,7 +6,7 @@ import LoginPage from "./pages/LoginPage.jsx";
 import Navbar from './components/Navbar.jsx';
 import ForgotPasswordPage from './pages/ForgotPasswordPage.jsx';
 import ResetPasswordPage from './pages/ResetPasswordPage.jsx';
-
+import MapPage from './pages/MapPage.jsx';
 const App = () => {
   return (
 
@@ -18,6 +18,7 @@ const App = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/forgotpassword" element={<ForgotPasswordPage/>}/>
         <Route path="/resetpassword" element={<ResetPasswordPage/>}/>
+        <Route path="/map" element={<MapPage/>}/>
       </Routes>
     </Router>
   );
