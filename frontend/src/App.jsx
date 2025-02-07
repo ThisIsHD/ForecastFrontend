@@ -6,6 +6,7 @@ import LoginPage from "./pages/LoginPage.jsx";
 import ForgotPasswordPage from './pages/ForgotPasswordPage.jsx';
 import ResetPasswordPage from './pages/ResetPasswordPage.jsx';
 import MapPage from './pages/MapPage.jsx';
+import FeaturesPage from './pages/Featurespage.jsx';
 const App = () => {
   return (
 
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/forgotpassword" element={<ForgotPasswordPage/>}/>
         <Route path="/resetpassword" element={<ResetPasswordPage/>}/>
         <Route path="/map" element={<MapPage/>}/>
+        <Route path="/features" element={<FeaturesPage/>}/>
       </Routes>
     </Router>
   );

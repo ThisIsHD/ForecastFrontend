@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState, useRef } from "react";
-import "ol/ol.css"; // Import OpenLayers styles
+import "ol/ol.css";
 import { Map, View } from "ol";
 import TileLayer from "ol/layer/Tile";
 import VectorLayer from "ol/layer/Vector";
@@ -18,8 +18,7 @@ const HomePage = () => {
   const mapRef = useRef(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [location, setLocation] = useState("");
-  
-  // Fetch user info to check login status
+
   useEffect(() => {
     const fetchUserInfo = async () => {
       try {
@@ -35,13 +34,11 @@ const HomePage = () => {
     fetchUserInfo();
   }, []);
 
-  // Handle location input change
   const handleLocationChange = (event) => {
     setLocation(event.target.value);
-    localStorage.setItem("userLocation", event.target.value); // Store location in local storage
+    localStorage.setItem("userLocation", event.target.value);
   };
 
-  // Handle Search - Open map in a new page
   const handleSearch = () => {
     if (location.trim() !== "") {
       navigate(`/map?location=${encodeURIComponent(location)}`);
@@ -50,14 +47,13 @@ const HomePage = () => {
     }
   };
 
-  // Handle GPS Auto-detection
   const handleGetCurrentLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const coords = `${position.coords.latitude},${position.coords.longitude}`;
           setLocation(coords);
-          localStorage.setItem("userLocation", coords); // Store GPS location in local storage
+          localStorage.setItem("userLocation", coords);
           navigate(`/map?location=${encodeURIComponent(coords)}`);
         },
         (error) => {
@@ -70,16 +66,14 @@ const HomePage = () => {
     }
   };
 
-  // Dummy disaster data (for markers)
   const disasterData = [
-    { id: 1, name: "Flood Warning", coordinates: [78.9629, 20.5937] }, 
+    { id: 1, name: "Flood Warning", coordinates: [78.9629, 20.5937] },
     { id: 2, name: "Cyclone Alert", coordinates: [88.3639, 22.5726] },
     { id: 3, name: "Earthquake Risk", coordinates: [77.2090, 28.6139] },
     { id: 4, name: "Tsunami Alert", coordinates: [79.8333, 11.8333] },
   ];
 
   useEffect(() => {
-    // Disaster Features
     const disasterFeatures = disasterData.map((disaster) => {
       const feature = new Feature({
         geometry: new Point(fromLonLat(disaster.coordinates)),
@@ -96,7 +90,6 @@ const HomePage = () => {
       return feature;
     });
 
-    // Initialize OpenLayers Map
     const map = new Map({
       target: mapRef.current,
       layers: [
@@ -116,12 +109,11 @@ const HomePage = () => {
 
   return (
     <div>
-      {/* Header Section */}
       <header className="bg-blue-700 text-white px-6 py-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold">DisasterForecast</h1>
           <nav className="space-x-4">
-            <a href="#features" className="hover:underline">Features</a>
+            <a href="/features" className="hover:underline">Features</a>
             <a href="#map" className="hover:underline">Map</a>
             <a href="#contact" className="hover:underline">Contact</a>
           </nav>
@@ -131,7 +123,6 @@ const HomePage = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
       <section className="bg-gradient-to-b from-blue-600 to-gray-100 text-white text-center py-20">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl font-extrabold">Stay Ahead of Disasters, Save Lives</h2>
@@ -159,7 +150,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Disaster Map Section */}
       <section id="map" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-gray-800">Live Disaster Map</h3>
@@ -169,7 +159,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Footer Section */}
       <footer id="contact" className="bg-gray-800 text-gray-300 py-6">
         <div className="max-w-7xl mx-auto flex justify-between">
           <div>
